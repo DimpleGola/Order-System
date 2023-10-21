@@ -1,0 +1,12 @@
+print(':::Welcome to pizza world:::\n\n')
+
+list_pizza=['personal','regular','superme']
+list_toppings=['cheese','corn','capcicum','onion']
+pizza_price={'personal':100,'regular':200,'superme':300}
+toppings_price={'cheese':50,'corn':30,'capcicum':40,'onion':20}
+
+order={}
+top=[]
+final_order={}
+total=[]
+active=True
