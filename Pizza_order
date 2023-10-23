@@ -10,3 +10,29 @@ top=[]
 final_order={}
 total=[]
 active=True
+while True:
+    print('choose pizza base-- ')                          #Display list of pizza
+    for i in list_pizza:
+        print('    ',i)
+        
+    p=input('choose: ').lower()                                              #Asks for pizza :Ask again If invalid response
+    if p not in list_pizza:
+        print(f' sorry {p} is not available at the moment!')
+        continue
+    if p in list_pizza:                                               #Asks for pizza :procedes If valid response
+        print(f'you have selected {p} pizza\n\n')
+        order.setdefault(p)
+    ok1=input('do u want to add toppings y/n: ').lower()                      #Asks for toppings: procedes If yes
+    if ok1=='y':
+        print('choose pizza toppings- ')
+        for k in list_toppings:
+            print('    ',k)
+        topping=True
+        while topping:
+            t=input('choose: ').lower()
+            top.append(t)
+            ok1=input('do u want to add more toppings y/n: ').lower()
+            if ok1=='y':
+                continue
+            if ok1=='n':                                             #procedes If no
+                topping=False
