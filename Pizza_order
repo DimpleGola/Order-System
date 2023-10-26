@@ -36,3 +36,24 @@ while True:
                 continue
             if ok1=='n':                                             #procedes If no
                 topping=False
+    if ok1=='n':
+        order[p]=top
+        print(f"\n{'*'*3} you ordered {p} pizza with {top} topping {'*'*3}\n")
+    
+    flag=True                                                       #Ask for addition or removal
+    while flag:
+        change=input(" you want to add/remove/no any topping?  ").lower()
+        if change=='add':
+            add=input("add topping   ").lower()
+            top.append(add)
+            continue
+        elif change=='remove':
+            rem=input(("remove topping   ")).lower()
+            top.remove(rem)
+            continue
+        elif change=='no':                                         #drops flag if no
+            flag=False
+            order[p]=top
+
+              
+    
