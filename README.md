@@ -1,5 +1,5 @@
 # Order-System
-automated-ordering
+automated-ordering: 
 This project is a simple command-line application that allows users to order pizza with custom toppings and generates a bill for the order.
 
 # Features
