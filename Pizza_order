@@ -56,4 +56,11 @@ while True:
             order[p]=top
 
               
-    
+    more=input("\ndo you want to order more pizza:y\\n  ").lower()                      #Ask for more pizza:runs the loop again
+    if more=='y':
+        continue 
+    if more=='n':                                                                               #stops if no
+            #order[p]=top
+        break
+for x,z in order.items():
+    print(f"\n{'*'*3} your final order is {x} pizza with {z} topping {'*'*3}\n\n")
