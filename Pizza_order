@@ -64,3 +64,32 @@ while True:
         break
 for x,z in order.items():
     print(f"\n{'*'*3} your final order is {x} pizza with {z} topping {'*'*3}\n\n")
+
+
+
+
+pizza=[]                                                   #Billing process
+toppings=[]
+total=[]
+
+
+for k in order.keys():
+    pizza.append(k)
+    final_order.setdefault(k)
+for j in order.keys():
+    for l in order.get(j):
+        toppings.append(l)
+        final_order.setdefault(l)
+#print(final_order)
+
+for it in final_order:
+    if it in pizza_price:
+        
+        final_order[it]=pizza_price.get(it)
+    if it in toppings_price:
+        final_order[it]=toppings_price.get(it)
+        
+for x in pizza:
+    total.append(pizza_price.get(x))
+for y in toppings:
+    total.append(toppings_price.get(y))
