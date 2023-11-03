@@ -99,3 +99,23 @@ customer_details['Name']=input("Please enter your name:  ").upper()
 customer_details['Contact']=input("Please enter your Contact number:  ")
 customer_details['Address']=input("Please enter your Address:  ").upper()
 customer_details['Pincode']=input("Please enter your Pincode:  ")
+
+
+print(f"\n    Thankyou {customer_details['Name']} for ordering!")                   #printing Bill
+print(f"\nWe will deliver your order to: \n \n{customer_details['Address']}")
+print(f"\n\nYour order details are:")
+for item,amt in final_order.items():
+    print(f'{item}....{(str(amt)).rjust(5)}')
+sub=sum(final_order.values())
+print(f'SubTotal....{(str(sub)).rjust(5)}')
+gst=sub*0.18
+print(f'18% GST.....{str(round(gst,2)).rjust(5)}')
+print('='*20)
+amt=sub+gst
+print(f'Total.....{(str(amt)).rjust(10)}')
+paid=int(input("Cash paid:......."))
+#print(f'Amt. paid.....{str((paid)).rjust(20)}')
+print("_"*20)
+print(f'cash returned...{str(round(paid-amt)).rjust(5)}')
+print("(Round off)")
+print(f"\n____we will contact you on {customer_details['Contact']} if anything comes up____")        
